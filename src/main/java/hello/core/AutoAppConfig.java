@@ -1,5 +1,11 @@
 package hello.core;
 
+import hello.core.member.MemberRepository;
+import hello.core.member.MemoryMemberRepository;
+import hello.core.order.OrderService;
+import hello.core.order.OrderServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
@@ -22,5 +28,10 @@ public class AutoAppConfig {
 
     //권장하는 방법
     //설정 정보 클래스의 위치를 프로젝트 최상단에 두는 것이다.  스프링 부트도 이 방법을 기본으로 한다.
+
+    @Bean
+    MemberRepository memberRepository() {
+        return new MemoryMemberRepository();
+    }
 
 }
