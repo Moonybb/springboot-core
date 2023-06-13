@@ -29,9 +29,9 @@ public class AutoAppConfig {
     //권장하는 방법
     //설정 정보 클래스의 위치를 프로젝트 최상단에 두는 것이다.  스프링 부트도 이 방법을 기본으로 한다.
 
-    @Bean
-    MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
-    }
+//    @Bean(name = "memoryMemberRepository")
+//    MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 
 }
